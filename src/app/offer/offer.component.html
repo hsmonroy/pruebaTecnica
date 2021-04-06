@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="characteristics" style="border-color: blue;">
+    <label><strong>Seleccione una oferta</strong></label>
+    <select (change)="changeFlag(idOffer)" [(ngModel)]="idOffer" style="margin-left: 10px;">
+      <option *ngFor="let offerid of idListOffer" [(value)]="offerid.id">{{offerid.id}}</option>
+    </select> 
+  </div>
+  <div class="oferta">
+    <div>
+      <label><strong>ID Oferta:</strong></label>
+      <input type="text" [(ngModel)]="idOffer" disabled style="margin-left: 10px;"> 
+    </div>
+    <div style="margin-top: 15px;">
+      <label><strong>Nombre:</strong></label>
+      <input type="text" [(ngModel)]="offerName" disabled style="margin-left: 17px;">    
+    </div>    
+  </div>
+</div>
+
+<div>
+  <div class="characteristics">
+    <app-characteristics [characteristicSon] = "characteristicsReceived"></app-characteristics>
+  </div>
+  <div class="prices">
+    <app-prices [pricesSon] = "pricesReceived"></app-prices>
+  </div>
+</div>
+

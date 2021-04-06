@@ -1,0 +1,15 @@
+<table class="table table-striped table-responsive-md" style="border-color: blue;">
+    <thead style="background-color: skyblue;">
+      <tr>
+        <th scope="col">Nombre Precio</th>
+        <th scope="col">Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of pricesSon">
+        <td>{{item.name}}</td>  
+        <td>{{item.price}}</td>   
+
+    </tr>
+    </tbody>
+  </table>
